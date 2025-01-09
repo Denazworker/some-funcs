@@ -126,7 +126,6 @@ end)
 
 getgenv()["get_connections"] = getconnections
 getgenv()["GetConnections"] = getconnections
-print("getconnections, getrenv initialized")
 
 
 
@@ -197,8 +196,6 @@ end)
 
 getgenv()["lz4_decompress"] = lz4decompress
 getgenv()["Lz4Decompress"] = lz4decompress
-print("lz4compress, lz4decompress initialized")
-
 
 
 
@@ -234,7 +231,6 @@ end)
 
 getgenv()["get_fps_cap"] = getfpscap
 getgenv()["GetFpsCap"] = getfpscap
-print("Initialized FPS funcs!1")
 
 
 getgenv()["getsenv"] = newcclosure(function(script)
