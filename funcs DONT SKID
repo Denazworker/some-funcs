@@ -95,19 +95,6 @@ getgenv()["getscriptfunction"] = getscriptclosure
 getgenv()["get_script_function"] = getscriptclosure
 getgenv()["GetScriptFunction"] = getscriptclosure
 
-getgenv()["replaceclosure"] = newcclosure(function(module, newfunc)  
-	local script = getrenv().require(module)
-	local originalfunc = getscriptclosure(module)
-	for k, v in pairs(script) do
-		if v == originalfunc then
-			script[k] = newfunc
-			break
-		end
-	end
-end
-
-getgenv()["replaceclosure"] = replaceclosure
-
 -- Returns the global environment of the game client. It can be used to access the global functions that LocalScripts and ModuleScripts use.
 getgenv()["getrenv"] = newcclosure(function() return RobloxEnvironment end)
 getgenv()["getconnections"] = newcclosure(function(Event)
